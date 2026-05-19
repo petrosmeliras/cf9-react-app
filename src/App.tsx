@@ -1,10 +1,11 @@
-// import Functio nalComponent from "./components/LessonTwo/FunctionalComponent.tsx";
+// import FunctionalComponent from "./components/LessonTwo/FunctionalComponent.tsx";
 // import ClassComponent from "./components/LessonTwo/ClassComponent.tsx";
 // import ArrowFunctionalComponent from "./components/LessonTwo/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/LessonThree/ArrowFunctionalComponentWithProps.tsx";
 import Layout from "./components/layout.tsx";
+import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
 // import Counter from "./components/LessonFour/Counter.tsx";
-import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
+// import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
 
 
 // type PropsA = {
@@ -67,7 +68,8 @@ function App() {
         {/*/>*/}
         {/*<p className="text-red-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, laboriosam!</p>*/}
         {/*<Counter />*/}
-        <ClassCounter/>
+        {/*<ClassCounter/>*/}
+        <CounterAdvanced/>
       </Layout>
 
 
