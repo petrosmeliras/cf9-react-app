@@ -3,7 +3,8 @@
 // import ArrowFunctionalComponent from "./components/LessonTwo/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/LessonThree/ArrowFunctionalComponentWithProps.tsx";
 import Layout from "./components/layout.tsx";
-import Counter from "./components/LessonFour/Counter.tsx";
+// import Counter from "./components/LessonFour/Counter.tsx";
+import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
 
 
 // type PropsA = {
@@ -65,7 +66,8 @@ function App() {
         {/*  description="lorem ipsum dolor"*/}
         {/*/>*/}
         {/*<p className="text-red-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, laboriosam!</p>*/}
-        <Counter />
+        {/*<Counter />*/}
+        <ClassCounter/>
       </Layout>
 
 
