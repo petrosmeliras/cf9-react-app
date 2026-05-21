@@ -4,7 +4,8 @@
 // import ArrowFunctionalComponentWithProps from "./components/LessonThree/ArrowFunctionalComponentWithProps.tsx";
 import Layout from "./components/layout.tsx";
 // import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
-import NameChanger from "./components/LessonFive/NameChanger.tsx";
+// import NameChanger from "./components/LessonFive/NameChanger.tsx";
+import CounterWithCustomHook from "./components/LessonFive/CounterWithCustomHook.tsx";
 // import Counter from "./components/LessonFour/Counter.tsx";
 // import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
 
@@ -55,26 +56,35 @@ function App() {
 
   return (
     <>
+      {/*LESSON TWO*/}
       {/*<FunctionalComponent />*/}
       {/*<ClassComponent />*/}
       {/*<ArrowFunctionalComponent />*/}
 
+      {/*LESSON THREE*/}
       {/*<ArrowFunctionalComponentWithProps title="Heading 1"/>*/}
-      {/*<ArrowFunctionalComponentWithProps title="Second Title" description="lorem ipsum dolor"/>*/}
+      {/*<ArrowFunctionalComponentWithProps*/}
+      {/*  title="Second Title"*/}
+      {/*  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet, deserunt dicta excepturi fugit ipsa modi perferendis quo repellat voluptates."*/}
+      {/*/>*/}
+      {/*<Layout addClasses="bg-gray-100">*/}
+      {/*  <ArrowFunctionalComponentWithProps*/}
+      {/*    title="Second Title"*/}
+      {/*    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet, deserunt dicta excepturi fugit ipsa modi perferendis quo repellat voluptates."*/}
+      {/*  />*/}
+      {/*</Layout>*/}
 
+
+      {/*LESSON FOUR*/}
       {/*<Layout addClasses="bg-gray-50">*/}
-      {/*  /!*<ArrowFunctionalComponentWithProps*!/*/}
-      {/*  /!*  title="Second Title"*!/*/}
-      {/*  /!*  description="lorem ipsum dolor"*!/*/}
-        {/*/>*/}
-      {/*  /!*<p className="text-red-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, laboriosam!</p>*!/*/}
       {/*  /!*<Counter />*!/*/}
       {/*  /!*<ClassCounter/>*!/*/}
       {/*  <CounterAdvanced/>*/}
       {/*</Layout>*/}
 
       <Layout addClasses="bg-gray-50">
-        <NameChanger/>
+        {/*<NameChanger/>*/}
+        <CounterWithCustomHook/>
       </Layout>
 
 
@@ -86,5 +96,4 @@ function App() {
 
   )
 }
-
-export default App
+export default App;
