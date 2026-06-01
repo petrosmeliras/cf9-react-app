@@ -53,11 +53,13 @@
 // // PropsTwo = {title, description, price, sort}
 
 import {Route, Routes} from "react-router";
-import NameChanger from "./components/LessonFive/NameChanger.tsx";
+// import NameChanger from "./components/LessonFive/NameChanger.tsx";
 import Homepage from "./pages/homepage.tsx";
-import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
-import Counter from "./components/LessonFour/Counter.tsx";
+// import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
+// import Counter from "./components/LessonFour/Counter.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
+import UserPage from "./pages/UserPage.tsx";
+import SearchPage from "./pages/SearchPage.tsx";
 
 {/*<h2 className="cf-text" id="id"></h2>*/}
 {/*/!* h2.cf-text#id *!/*/}
@@ -143,24 +145,32 @@ function App() {
       <Routes>
         {/*Χρησιμοποιουμε το routerlayout αντι για το κλασικο layout το οποιο
         δεν χρειαζεται το addclasses και το children αλλα το outlet μονο. ετσι μπορουμε να βαλουμε διαφορετικο layout
-        σε διαφορα routes που θελουμε . δλδ να διαφοροποιουμε ανα σελιδα το layout πχ οταν κανει Loggin o χρηστης να του
-        αλλαζει τα χρωματα.*/}
+        σε διάφορα routes που Θέλουμε . δλδ να διαφοροποιούμε ανα σελιδα το layout πχ οταν κανει Loggin o χρηστης να του
+        αλλάζει τα χρώματά.*/}
         <Route element={<RouterLayout/>}>
           <Route index element={<Homepage/>} />
           {/*<Route path="examples?"> etsi den einai aparaithto to examples prin apo to counter, name-changer ktl*/}
-          <Route path="examples">
-            <Route path="name-changer" element={<NameChanger />} />
-            <Route path="counter" element={<Counter />} />
-            <Route path="counter-advanced" element={<CounterAdvanced />} />
-          </Route>
-        </Route>
+        {/*  <Route path="examples">*/}
+        {/*    <Route path="name-changer" element={<NameChanger />} />*/}
+        {/*    <Route path="counter" element={<Counter />} />*/}
+        {/*    <Route path="counter-advanced" element={<CounterAdvanced />} />*/}
+        {/*  </Route>*/}
+        {/*</Route>*/}
 
         {/*/users*/}
         {/*/users/userId*/}
-        {/*<Route>*/}
-        {/*  <Route index element={<UserListPage/>} />*/}
-        {/*  <Route path=":userId" element={<UserPage />} />*/}
-        {/*</Route>*/}
+          <Route path="users">
+            {/*<Route index element={<UserListPage/>} />*/}
+            <Route path=":userId" element={<UserPage />} />
+            {/*  /users/15 Path params*/}
+            {/*  /users?id=15 Query params*/}
+          </Route>
+        </Route>
+
+        <Route path="search" element={<SearchPage/>} />
+        {/* /search?query=React&page=2*/}
+
+
 
         CATCH ALL SEGMENT TO ASTERAKI. KALOUME OLA TA ARXEIA
         {/*/files*/}
