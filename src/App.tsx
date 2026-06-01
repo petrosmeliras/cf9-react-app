@@ -2,7 +2,7 @@
 // import ClassComponent from "./components/LessonTwo/ClassComponent.tsx";
 // import ArrowFunctionalComponent from "./components/LessonTwo/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/LessonThree/ArrowFunctionalComponentWithProps.tsx";
-import Layout from "./components/layout.tsx";
+// import Layout from "./components/layout.tsx";
 // import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
 // import NameChanger from "./components/LessonFive/NameChanger.tsx";
 // import CounterWithCustomHook from "./components/LessonFive/CounterWithCustomHook.tsx";
@@ -12,7 +12,8 @@ import Layout from "./components/layout.tsx";
 // import AutoRedirectAdvanced from "./components/LessonSix/AutoRedirectAdvanced.tsx";
 // import WindowSize from "./components/LessonSix/WindowSize.tsx";
 // import FocusInput from "./components/LessonSix/FocusInput.tsx";
-import PreviousValue from "./components/LessonSix/PreviousValue.tsx";
+// import PreviousValue from "./components/LessonSix/PreviousValue.tsx";
+// import {useEffect} from "react";
 // import Counter from "./components/LessonFour/Counter.tsx";
 // import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
 
@@ -51,6 +52,13 @@ import PreviousValue from "./components/LessonSix/PreviousValue.tsx";
 //
 // // PropsTwo = {title, description, price, sort}
 
+import {Route, Routes} from "react-router";
+import NameChanger from "./components/LessonFive/NameChanger.tsx";
+import Homepage from "./pages/homepage.tsx";
+import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
+import Counter from "./components/LessonFour/Counter.tsx";
+import RouterLayout from "./components/RouterLayout.tsx";
+
 {/*<h2 className="cf-text" id="id"></h2>*/}
 {/*/!* h2.cf-text#id *!/*/}
 
@@ -71,6 +79,10 @@ function App() {
   // useEffect(() => {
   //   alert("Hello World!");
   // }, [])
+
+  // useEffect(() => {
+  //   history.pushState({}, "", "/about");
+  // }, []);
 
   return (
     <>
@@ -107,13 +119,67 @@ function App() {
       {/*</Layout>*/}
 
     {/*  Lesson Six*/}
-      <Layout addClasses="bg-gray-50">
-        {/*<AutoRedirectAdvanced />*/}
-        {/*<WindowSize />*/}
-        {/*<FocusInput />*/}
-        <PreviousValue/>
-      </Layout>
+    {/*  <Layout addClasses="bg-gray-50">*/}
+    {/*    /!*<AutoRedirectAdvanced />*!/*/}
+    {/*    /!*<WindowSize />*!/*/}
+    {/*    /!*<FocusInput />*!/*/}
+    {/*    <PreviousValue/>*/}
+    {/*  </Layout>*/}
 
+
+    {/*  Lesson Seven*/}
+    {/*  <Routes>*/}
+    {/*    <Route index element={<Homepage/>} />*/}
+    {/*    <Route path="name-changer" element={<NameChanger />} />*/}
+    {/*    <Route path="counter" element={<Counter />} />*/}
+    {/*    <Route path="counter-advanced" element={<CounterAdvanced />} />*/}
+    {/*  </Routes>*/}
+
+      {/**/}
+      {/*/examples/name-changer*/}
+      {/*/examples/counter*/}
+      {/*/examples/counter-advanced*/}
+
+      <Routes>
+        {/*Χρησιμοποιουμε το routerlayout αντι για το κλασικο layout το οποιο
+        δεν χρειαζεται το addclasses και το children αλλα το outlet μονο. ετσι μπορουμε να βαλουμε διαφορετικο layout
+        σε διαφορα routes που θελουμε . δλδ να διαφοροποιουμε ανα σελιδα το layout πχ οταν κανει Loggin o χρηστης να του
+        αλλαζει τα χρωματα.*/}
+        <Route element={<RouterLayout/>}>
+          <Route index element={<Homepage/>} />
+          {/*<Route path="examples?"> etsi den einai aparaithto to examples prin apo to counter, name-changer ktl*/}
+          <Route path="examples">
+            <Route path="name-changer" element={<NameChanger />} />
+            <Route path="counter" element={<Counter />} />
+            <Route path="counter-advanced" element={<CounterAdvanced />} />
+          </Route>
+        </Route>
+
+        {/*/users*/}
+        {/*/users/userId*/}
+        {/*<Route>*/}
+        {/*  <Route index element={<UserListPage/>} />*/}
+        {/*  <Route path=":userId" element={<UserPage />} />*/}
+        {/*</Route>*/}
+
+        CATCH ALL SEGMENT TO ASTERAKI. KALOUME OLA TA ARXEIA
+        {/*/files*/}
+        {/*/files/**/}
+        {/*<Route path="files/*" element={<File />} />*/}
+
+      {/*  GIA NA DIABASOUME ESOTERIKA MESA STO COMPONENT TI EXEI ZHTHSEI O XRHSTHS
+      XRHSIMOPOIOUME TO USEPARAMS
+
+      let params = useParams();
+      let filepath = params["*"] */}
+
+
+        {/*Error 404 page not found. san route to vazoume panta teleutaio giati an to valoyme pano pano
+         epeidh pianei ta panta ( catch all segment) h selida tha bgazei panta 404 */}
+        {/*<Route path="*" element={<NotFoundPage />} />*/}
+
+
+      </Routes>
 
 
     </>
