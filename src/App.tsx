@@ -60,6 +60,7 @@ import Homepage from "./pages/homepage.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
 import UserPage from "./pages/UserPage.tsx";
 import SearchPage from "./pages/SearchPage.tsx";
+import MultiFieldForm from "./components/LessonNine/MultiFieldForm.tsx";
 
 {/*<h2 className="cf-text" id="id"></h2>*/}
 {/*/!* h2.cf-text#id *!/*/}
@@ -165,11 +166,13 @@ function App() {
             {/*  /users/15 Path params*/}
             {/*  /users?id=15 Query params*/}
           </Route>
+
+
+          <Route path="search" element={<SearchPage/>} />
+          {/* /search?query=React&page=2*/}
+
+          <Route path="multifield-form" element={<MultiFieldForm/>} />
         </Route>
-
-        <Route path="search" element={<SearchPage/>} />
-        {/* /search?query=React&page=2*/}
-
 
 
         CATCH ALL SEGMENT TO ASTERAKI. KALOUME OLA TA ARXEIA
