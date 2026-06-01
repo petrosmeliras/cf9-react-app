@@ -61,6 +61,7 @@ import RouterLayout from "./components/RouterLayout.tsx";
 import UserPage from "./pages/UserPage.tsx";
 import SearchPage from "./pages/SearchPage.tsx";
 import MultiFieldForm from "./components/LessonNine/MultiFieldForm.tsx";
+import MultiFieldFormWithValidation from "./components/LessonNine/MultiFieldFormWithValidation.tsx";
 
 {/*<h2 className="cf-text" id="id"></h2>*/}
 {/*/!* h2.cf-text#id *!/*/}
@@ -172,6 +173,7 @@ function App() {
           {/* /search?query=React&page=2*/}
 
           <Route path="multifield-form" element={<MultiFieldForm/>} />
+          <Route path="multifield-form-validation" element={<MultiFieldFormWithValidation/>} />
         </Route>
 
 
