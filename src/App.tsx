@@ -63,6 +63,7 @@ import SearchPage from "./pages/SearchPage.tsx";
 import MultiFieldForm from "./components/LessonNine/MultiFieldForm.tsx";
 import MultiFieldFormWithValidation from "./components/LessonNine/MultiFieldFormWithValidation.tsx";
 import MultiFieldFormWithZod from "./LessonTen/MultiFieldFormWithZod.tsx";
+import MultiFieldFormWithHookForm from "./LessonTen/MultiFieldFormWithHookForm.tsx";
 
 {/*<h2 className="cf-text" id="id"></h2>*/}
 {/*/!* h2.cf-text#id *!/*/}
@@ -176,6 +177,7 @@ function App() {
           <Route path="multifield-form" element={<MultiFieldForm/>} />
           <Route path="multifield-form-validation" element={<MultiFieldFormWithValidation/>} />
           <Route path="multifield-form-zod" element={<MultiFieldFormWithZod/>} />
+          <Route path="multifield-form-hookform" element={<MultiFieldFormWithHookForm/>} />
         </Route>
 
 
