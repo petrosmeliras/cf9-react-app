@@ -65,6 +65,9 @@ import MultiFieldFormWithValidation from "./components/LessonNine/MultiFieldForm
 import MultiFieldFormWithZod from "./LessonTen/MultiFieldFormWithZod.tsx";
 import MultiFieldFormWithHookForm from "./LessonTen/MultiFieldFormWithHookForm.tsx";
 import ProductListPage from "./pages/ProductListPage.tsx";
+import ProductPage from "@/pages/ProductPage.tsx";
+import LoginPage from "@/pages/LoginPage.tsx";
+import ProtectedRoute from "@/components/ui/ProtectedRoute.tsx";
 
 {/*<h2 className="cf-text" id="id"></h2>*/}
 {/*/!* h2.cf-text#id *!/*/}
@@ -180,10 +183,12 @@ function App() {
           <Route path="multifield-form-zod" element={<MultiFieldFormWithZod/>} />
           <Route path="multifield-form-hookform" element={<MultiFieldFormWithHookForm/>} />
 
-          <Route path="products">
+          <Route path="products" element={<ProtectedRoute/>} >
             <Route index element={<ProductListPage/>} />
-            {/*<Route path=":productId" element={<ProductPage/>} />*/}
+            <Route path=":productId" element={<ProductPage/>} />
           </Route>
+
+          <Route path="Login" element={<LoginPage/>} />
 
         </Route>
 
